@@ -1,0 +1,144 @@
+@import  "./font-awesome.min.css";
+@import  "./glyphicons.css";
+@import  "./simple-line-icons.css";
+
+@indexFontColor: #3b92fb;
+@indexFontSize : 20px;
+
+.loginBgContainer{
+	background-color: #5a6778;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	.formContainer {
+		width: 340px;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #ffffff;
+		border-radius: 40px;
+
+		/*登录提示*/
+		.fromTitle {
+			height: 60px;
+			line-height: 60px;
+			font-size: 18px;
+			text-align: center;
+			color: #7c9099;
+		}
+
+		/*list样式*/
+		.am-list-body {
+			border-top: 0;
+			border-bottom: 0;
+		}
+		.am-list-body .am-list-item:last-child {
+			border-bottom: 0;
+		}
+
+		/*input样式*/
+		.am-list-item .am-input-label.am-input-label-5, .am-textarea-label.am-textarea-label-5 {
+			min-width:auto;
+			margin-left: 3px;
+		}
+		.am-list-item .am-input-control input {
+			font-size: 16px;
+			color: #888;
+		}
+
+		/*select样式*/
+		.pickerContainer {
+			.am-list-item .am-list-line .am-list-content {
+				flex: 0;
+				min-width: 18px;
+				margin-right: 20px;
+
+			}
+			.am-list-item .am-list-line .am-list-extra {
+				text-align: left;
+				color: #888;
+			}
+			.am-list-item .am-list-line .am-list-arrow-horizontal {
+				visibility: hidden;
+			}
+		}
+
+		/*checkbox*/
+		.am-list-header {
+			display: none;
+		}
+		.am-checkbox-inner {
+			width: 16px;
+			height: 16px;
+		}
+		.am-checkbox.am-checkbox-checked .am-checkbox-inner { /*选中时样式*/
+			/*border: 0;*/
+		}
+		.am-checkbox-inner:after { /*选中时勾的样式*/
+			top: 0;
+			right: 5px;
+		}
+		.centerCheckbox { /*checkbox居中，在外面包了一层*/
+			display: inline-block;
+			width: 120px;
+			.am-list .am-list-item.am-checkbox-item .am-list-thumb {
+				width: auto;
+				margin-right: 22px;
+			}
+			.am-list-item .am-list-line .am-list-content {
+				font-size: 14px;
+				color: grey;
+				margin-top: -2px;
+			}
+			 div:not(:last-child) .am-list-line {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	/*button*/
+	.am-button-primary {
+		width: 300px;
+	}
+
+	/*字体样式*/
+	i {
+		font-size: 18px;
+		color: grey;
+	}
+
+	/*错误提示*/
+	.error_top_container {
+		width: 310px;
+		margin: 5px auto;
+		border: 1px solid #ffb4a8;
+		background-color: #fef2f2;
+		color: #6C6C6C;
+		height: 30px;
+		line-height: 30px;
+		/*警示图标*/
+		i {
+			margin-right: 5px;
+			font-size: 16px;
+			color: burlywood;
+		}
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+	html:not([data-scale]) .loginBgContainer .am-list-body::before {
+		display: none;
+	}
+	html:not([data-scale]) .loginBgContainer .am-list-body::after {
+		display: none;
+	}
+	html:not([data-scale])  .am-list-body .CheckBoxItemContainer div:not(:last-child) .am-list-line::after {
+		display: none;
+	}
+	html:not([data-scale]) .am-list-body div:not(:last-child) .am-list-line::after {
+		width: 96%;
+	}
+}
+
